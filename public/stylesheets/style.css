@@ -51,3 +51,12 @@ h1 {
   width: 490px;
   height: 90px;
 }
+.btn {
+  text-decoration: none;
+  background-color: #343434;
+  color: #fff;
+  padding: 4px 8px 5px;
+  display: inline-block;
+  margin-top: 6px;
+  border-radius: 4px;
+}
