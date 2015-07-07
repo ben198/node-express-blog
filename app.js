@@ -42,12 +42,12 @@ app.get('/blog/:id', function(req, res) {
 });
 
 app.post('/blog/addComment', function(req, res) {
-  articleProvider.addCommentToArticle(req.param('_id'), {
-    person: req.param('person'),
-    comment: req.param('comment'),
+  articleProvider.addCommentToArticle(req.body['_id'], {
+    person: req.body['person'],
+    comment: req.body['comment'],
     created_at: new Date()
   }, function(error, docs) {
-    res.redirect('/blog/' + req.param('_id'))
+    res.redirect('/blog/' + req.body['_id'])
   });
 });
 
